@@ -7,22 +7,25 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-
+import ImagePicker from "../ImagePicker";
 const RegisterScreen = () => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity
-        style={styles.profile}
-        onPress={() => {
-          alert("profile photo added");
-        }}
-      >
-        <MaterialCommunityIcons name="account-tie" size={150} color="purple" />
-        <Text style={styles.profileText}>add profile photo</Text>
+      <TouchableOpacity style={styles.profile}>
+        <ImagePicker />
+        {/* <Text style={styles.profileText}>add profile photo</Text> */}
       </TouchableOpacity>
       <View style={styles.formContainer}>
-        <TextInput placeholder="Full Name" style={styles.formInput} />
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            borderBottomWidth: 1,
+          }}
+        >
+          <Text>eMAIL</Text>
+          <TextInput placeholder="Full Name" style={styles.formInput} />
+        </View>
         <TextInput placeholder="Email" style={styles.formInput} />
         <TextInput placeholder="Phone Number" style={styles.formInput} />
         <TextInput placeholder="Role" style={styles.formInput} />
