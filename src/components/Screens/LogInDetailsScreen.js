@@ -1,8 +1,14 @@
 import React from "react";
-import { Image, StyleSheet, Text, TextInput, View } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 
-const LoginScreen = ({ navigation }) => {
+const LogInDetailsScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.loginHero}>
@@ -23,7 +29,7 @@ const LoginScreen = ({ navigation }) => {
         <TouchableOpacity
           style={styles.btn}
           onPress={() => {
-            navigation.navigate("details");
+            navigation.navigate("logindetails");
           }}
         >
           <Text style={styles.text}>sign in</Text>
@@ -33,7 +39,7 @@ const LoginScreen = ({ navigation }) => {
   );
 };
 
-export default LoginScreen;
+export default LogInDetailsScreen;
 
 const styles = StyleSheet.create({
   container: {

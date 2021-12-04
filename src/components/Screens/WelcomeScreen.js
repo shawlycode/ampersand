@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.logo}>
@@ -15,7 +15,11 @@ const WelcomeScreen = () => {
         <Text style={styles.titleText}>contacts</Text>
       </View>
       <View style={styles.getStartedBtn}>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("getStarted");
+          }}
+        >
           <Text style={styles.getStartedBtnText}>Get started</Text>
           <View style={styles.btn}></View>
         </TouchableOpacity>
